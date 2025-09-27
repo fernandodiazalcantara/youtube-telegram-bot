@@ -49,7 +49,8 @@ while True:
             enviar_mensaje(f'avanzó')
         vistas_anteriores = vistas  # ✅ Actualiza el estado
 
-    time.sleep(60)
+    time.sleep(300)
+
 
 
 
