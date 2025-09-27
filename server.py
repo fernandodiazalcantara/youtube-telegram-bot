@@ -42,7 +42,8 @@ while True:
     if vistas >= UMBRAL_VISTAS:
         enviar_mensaje(f'🎉 ¡Ya casi un millón!')
         break
-    time.sleep(30)
+    time.sleep(60)
+
 
 
 
