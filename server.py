@@ -36,15 +36,18 @@ def enviar_mensaje(mensaje):
     payload = {'chat_id': TELEGRAM_CHAT_ID, 'text': mensaje}
     requests.post(url, data=payload)
 
+# ✅ Control de vistas anteriores para evitar duplicados
+vistas_anteriores = None
+
 while True:
     vistas = obtener_vistas()
     print(f'Vistas actuales: {vistas}')
-    if vistas >= UMBRAL_VISTAS:
-        enviar_mensaje(f'🎉 ¡Ya casi un millón!')
-        break
+    
+    # Solo envía si las vistas cambiaron
+    if vistas != vistas_anteriores:
+        enviar_mensaje(f'Vistas actuales: {vistas}')
+        if vistas >= UMBRAL_VISTAS:
+            enviar_mensaje(f'🎉 ¡Ya casi un millón!')
+        vistas_anteriores = vistas  # ✅ Actualiza el estado
+
     time.sleep(60)
-
-
-
-
-
