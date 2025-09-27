@@ -7,7 +7,7 @@ API_KEY = "AIzaSyCs5ZDe7esZjfRYZySCMVMg33a5a79EYSI"
 VIDEO_ID = "41tQYEA9Kas"
 TELEGRAM_TOKEN = "8443868184:AAGPPRBNqqr8HrBoucCylpOwqWrbjJ9XtSI"
 TELEGRAM_CHAT_ID = "6193435608"
-UMBRAL_VISTAS = 800000
+UMBRAL_VISTAS = 80000
 
 app = Flask('')
 
@@ -43,4 +43,5 @@ while True:
         enviar_mensaje(f'🎉 ¡Ya casi un millón!')
         break
     time.sleep(60)
+
 
