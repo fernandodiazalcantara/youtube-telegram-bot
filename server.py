@@ -46,10 +46,11 @@ while True:
     if vistas != vistas_anteriores:
         enviar_mensaje(f'Vistas actuales: {vistas}')
         if vistas >= UMBRAL_VISTAS:
-            enviar_mensaje(f'avanzó')
+            enviar_mensaje(f'Avanzó')
         vistas_anteriores = vistas  # ✅ Actualiza el estado
 
     time.sleep(1600)
+
 
 
 
